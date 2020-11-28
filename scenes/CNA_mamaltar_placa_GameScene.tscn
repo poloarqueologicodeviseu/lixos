@@ -1,0 +1,133 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/CNA_mamaltar_placa_GameScene.gd" type="Script" id=1]
+[ext_resource path="res://graphics/CNA/mamaltar/placa/Group 47.svg" type="Texture" id=2]
+[ext_resource path="res://audio/music/Monkeys Spinning Monkeys.ogg" type="AudioStream" id=3]
+[ext_resource path="res://graphics/fundo_caderno.svg" type="Texture" id=4]
+[ext_resource path="res://graphics/CNA/mamaltar/placa/placa.svg" type="Texture" id=5]
+[ext_resource path="res://graphics/CNA/mamaltar/placa/Group 57.svg" type="Texture" id=6]
+[ext_resource path="res://graphics/CNA/mamaltar/placa/Group 58.svg" type="Texture" id=7]
+[ext_resource path="res://graphics/menuscreen/JC/bg_color.png" type="Texture" id=8]
+[ext_resource path="res://fonts/McLaren-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://graphics/voltar_hover.svg" type="Texture" id=13]
+[ext_resource path="res://graphics/voltar.svg" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 9 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.00012207
+texture = ExtResource( 8 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundo2" type="TextureRect" parent="fundo"]
+anchor_left = -0.0997012
+anchor_top = 0.814835
+anchor_right = 1.14518
+anchor_bottom = 2.08177
+margin_left = 191.426
+margin_top = -880.022
+margin_right = -278.746
+margin_bottom = -1168.31
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Title" type="TextureRect" parent="."]
+anchor_left = 0.183228
+anchor_top = 0.111111
+anchor_right = 0.48102
+anchor_bottom = 0.187027
+margin_right = 8166.24
+margin_bottom = 1171.01
+rect_scale = Vector2( 0.0654338, 0.0654338 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="ReturnMenuButton" type="TextureButton" parent="."]
+margin_left = 55.039
+margin_top = 966.265
+margin_right = 205.039
+margin_bottom = 1038.27
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 13 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1000.0
+margin_top = 120.0
+margin_right = 1600.0
+margin_bottom = 920.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 1000.0
+margin_top = 120.0
+margin_right = 1600.0
+margin_bottom = 920.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 1045.9
+margin_top = 244.8
+margin_right = 1563.9
+margin_bottom = 784.8
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 352.0
+margin_top = 245.0
+margin_right = 924.0
+margin_bottom = 920.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse finibus, est a ullamcorper hendrerit, magna nibh ullamcorper leo, eget suscipit sapien tellus in dui. Nam sit amet libero nec velit ornare venenatis. In finibus sapien ante, ac ornare ante imperdiet ut. Aenean at dui ut metus viverra consequat. Vestibulum sed orci vitae dolor facilisis ornare ac nec ante. Vestibulum tincidunt turpis diam, sed sollicitudin dolor convallis non. Praesent non mollis neque. Proin quis aliquet massa, ac maximus urna. Nulla consectetur id metus in consectetur. Etiam auctor tellus nec urna tempor commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin elementum turpis ligula, pharetra sodales tortor cursus id. Praesent ut mauris sapien. Suspendisse enim tortor, ornare non hendrerit tempor, commodo et orci. Quisque sit amet augue vitae ex congue tincidunt.
+
+Pellentesque vulputate mi eget turpis scelerisque, ut lobortis nulla semper. Proin bibendum metus eu arcu euismod, eu volutpat justo rhoncus. Donec eleifend ligula vitae enim vehicula laoreet. Maecenas posuere velit eget orci auctor, ut sagittis diam mollis. Etiam egestas odio orci, ac vehicula ipsum luctus eu. In hac habitasse platea dictumst. Curabitur sed aliquam eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus venenatis diam tortor, ac semper lacus facilisis in. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ReturnMenuButton" to="." method="_on_StartGameButton_pressed"]
+[connection signal="pressed" from="ReturnMenuButton" to="." method="_on_ReturnMenuButton_pressed"]
