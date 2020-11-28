@@ -1,0 +1,175 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://graphics/menuscreen/JC/bg_color.png" type="Texture" id=1]
+[ext_resource path="res://audio/music/Monkeys Spinning Monkeys.ogg" type="AudioStream" id=2]
+[ext_resource path="res://graphics/menuscreen/JC/Group 46.svg" type="Texture" id=3]
+[ext_resource path="res://graphics/menuscreen/JC/sair.svg" type="Texture" id=4]
+[ext_resource path="res://graphics/menuscreen/JC/Subtract.svg" type="Texture" id=5]
+[ext_resource path="res://graphics/menuscreen/JC/b/Group 60.svg" type="Texture" id=6]
+[ext_resource path="res://graphics/menuscreen/JC/a/Group 60.svg" type="Texture" id=7]
+[ext_resource path="res://graphics/menuscreen/JC/b/Group 62.svg" type="Texture" id=8]
+[ext_resource path="res://graphics/menuscreen/JC/a/Group 62.svg" type="Texture" id=9]
+[ext_resource path="res://graphics/menuscreen/JC/a/Group 63.svg" type="Texture" id=10]
+[ext_resource path="res://graphics/menuscreen/JC/b/Group 63.svg" type="Texture" id=11]
+[ext_resource path="res://graphics/menuscreen/JC/Vector.png" type="Texture" id=12]
+[ext_resource path="res://fonts/Acme-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://TitleScene.gd" type="Script" id=14]
+[ext_resource path="res://graphics/menuscreen/JC/Group 49.svg" type="Texture" id=16]
+[ext_resource path="res://graphics/menuscreen/JC/a/Group 61.svg" type="Texture" id=17]
+[ext_resource path="res://graphics/menuscreen/JC/b/Group 61.svg" type="Texture" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 13 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.00012207
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="viseu" type="TextureRect" parent="fundo"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -753.0
+margin_right = 960.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 460.254
+margin_top = 80.6546
+margin_right = 10418.3
+margin_bottom = 4765.65
+rect_scale = Vector2( 0.102585, 0.102585 )
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 934.0
+margin_top = 520.0
+margin_right = 1146.0
+margin_bottom = 2048.0
+rect_scale = Vector2( 0.369781, 0.369781 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartGameButton" type="TextureButton" parent="."]
+anchor_left = 0.417661
+anchor_top = 0.554146
+anchor_right = 0.627557
+anchor_bottom = 0.624516
+rect_pivot_offset = Vector2( 264.658, 108 )
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CNAGameButton" type="TextureButton" parent="."]
+anchor_left = 0.284885
+anchor_top = 0.65
+anchor_right = 0.640093
+anchor_bottom = 0.721296
+rect_pivot_offset = Vector2( 263.354, 116.286 )
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="OptionsGameButton" type="TextureButton" parent="."]
+anchor_left = 0.451872
+anchor_top = 0.72963
+anchor_right = 0.599789
+anchor_bottom = 0.800926
+rect_pivot_offset = Vector2( 263.354, 116.286 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AboutGameButton" type="TextureButton" parent="."]
+anchor_left = 0.419271
+anchor_top = 0.828879
+anchor_right = 0.539583
+anchor_bottom = 0.895546
+rect_pivot_offset = Vector2( 263.354, 116.286 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="QuitGameButton" type="TextureButton" parent="."]
+anchor_left = 0.0296999
+anchor_top = 0.894673
+anchor_right = 0.106783
+anchor_bottom = 0.96134
+rect_pivot_offset = Vector2( 264.658, 108 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 1790.15
+margin_top = 1016.52
+margin_right = 1870.15
+margin_bottom = 1056.52
+rect_scale = Vector2( 1.001, 1.00229 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "v0.02"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+[connection signal="pressed" from="StartGameButton" to="." method="_on_StartGameButton_pressed"]
+[connection signal="pressed" from="CNAGameButton" to="." method="_on_CNAGameButton_pressed"]
+[connection signal="pressed" from="OptionsGameButton" to="." method="_on_OptionsGameButton_pressed"]
+[connection signal="pressed" from="AboutGameButton" to="." method="_on_AboutGameButton_pressed"]
+[connection signal="pressed" from="QuitGameButton" to="." method="_on_QuitGameButton_pressed"]
